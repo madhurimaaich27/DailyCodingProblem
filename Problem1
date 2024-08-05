@@ -1,0 +1,15 @@
+Class Solution{
+   public static boolean list_add(int K, int[] list){
+      for(int i=0;i<list.length;i++){
+        for(int j=i+1;j<list.length;j++){
+            if(list[i]+list[j]==K)
+               return true;
+        }
+      }
+      return false;
+     }
+   public static void main (String[] args){
+    Scanner sc=new Scanner(System.in);
+    int K=sc.nextInt();
+      for(int i=0;i<
+    int []list=
