@@ -1,3 +1,4 @@
+Given a list of numbers and a number K. Return if any two numbers from the list add up to K
 Class Solution{
    public static boolean list_add(int K, int[] list){
       for(int i=0;i<list.length;i++){
