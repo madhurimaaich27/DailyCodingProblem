@@ -1,0 +1,40 @@
+Given an array arr of size n−1 that contains distinct integers in the range of 1 to n (inclusive), find the missing element. 
+The array is a permutation of size n with one element missing. Return the missing element.
+class Solution {
+
+    // Note that the size of the array is n-1
+    int missingNumber(int n, int arr[]) {
+        int sum=0;
+        // Your Code Here
+        for(int i=0;i<n-1;i++){
+           sum+=arr[i]; 
+        }
+        int totalSum=(n*(n+1))/2;
+        int missing = totalSum-sum;
+        return missing;
+        
+    }
+}
+Time Complexity - O(N), Space Complexity - O(1)
+
+class Solution {
+
+    // Note that the size of the array is n-1
+    int missingNumber(int n, int arr[]) {
+        // create hash array of size n-1
+        int[] hash=new int[n+1];
+        //store frequencies of elements
+        for(int i=0;i<n-1;i++){
+            hash[arr[i]]++;
+        }
+        //find the missing number
+        for(int i=1;i<=n;i++){
+            if(hash[i]==0){
+                return i;
+            }
+        }
+        return -1;
+        
+    }
+}
+Time Complexity - O(N) Space Complexity- O(N)
